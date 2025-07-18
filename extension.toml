@@ -1,9 +1,7 @@
-id = "js_override"
-name = "JS_OVERRIDE"
-description = "JavaScript, TypeScript, TSX highlight override."
+id = "syntax_highlight_override"
+name = "Syntax Highlight Override"
+description = "Tweaks Syntax Highlighting for JavaScript, TypeScript, TSX and other languages."
 version = "0.1.0"
 schema_version = 1
 authors = ["Thomas Gorny <thomas.gorny@pm.me>"]
-repository = "https://github.com/zed-industries/zed"
-
-
+repository = "https://github.com/trival/zed-syntax-overrides"
