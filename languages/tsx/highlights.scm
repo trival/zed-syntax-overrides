@@ -47,6 +47,16 @@
   left: (identifier) @function.definition
   right: [(function_expression) (arrow_function)])
 
+; Parameters
+
+(formal_parameters
+  (required_parameter
+    pattern: (identifier) @variable.parameter))
+
+(formal_parameters
+  (optional_parameter
+    pattern: (identifier) @variable.parameter))
+
 ; Special identifiers
 
 ((identifier) @type
