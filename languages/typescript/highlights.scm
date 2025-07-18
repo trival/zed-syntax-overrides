@@ -79,6 +79,7 @@
   left: (identifier) @function.definition
   right: [(function_expression) (arrow_function)])
 
+; Copied from Rust, but doesn't work and crashes highlighting. Need further investigation how to highlight parameters.
 ; (parameter (identifier) @variable.parameter)
 
 ; Literals
