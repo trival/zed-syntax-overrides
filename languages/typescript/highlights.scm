@@ -53,31 +53,33 @@
 ; Function and method definitions
 
 (function_expression
-  name: (identifier) @function)
+  name: (identifier) @function.definition)
 (function_declaration
-  name: (identifier) @function)
+  name: (identifier) @function.definition)
 (method_definition
-  name: [(property_identifier) (private_property_identifier)] @function.method)
+  name: [(property_identifier) (private_property_identifier)] @function.method.definition)
 (method_definition
     name: (property_identifier) @constructor
     (#eq? @constructor "constructor"))
 
 (pair
-  key: [(property_identifier) (private_property_identifier)] @function.method
+  key: [(property_identifier) (private_property_identifier)] @function.method.definition
   value: [(function_expression) (arrow_function)])
 
 (assignment_expression
   left: (member_expression
-    property: [(property_identifier) (private_property_identifier)] @function.method)
+    property: [(property_identifier) (private_property_identifier)] @function.method.definition)
   right: [(function_expression) (arrow_function)])
 
 (variable_declarator
-  name: (identifier) @function
+  name: (identifier) @function.definition
   value: [(function_expression) (arrow_function)])
 
 (assignment_expression
-  left: (identifier) @function
+  left: (identifier) @function.definition
   right: [(function_expression) (arrow_function)])
+
+; (parameter (identifier) @variable.parameter)
 
 ; Literals
 
